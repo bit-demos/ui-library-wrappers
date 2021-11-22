@@ -10,16 +10,22 @@
 
 {
     "mui/button": {
-        "scope": "",
-        "version": "",
+        "scope": "learn-bit-react.ui-library-wrappers",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "mui/button"
     },
-    "react-with-mui": {
-        "scope": "",
-        "version": "",
+    "mui/plugins/react-with-mui": {
+        "scope": "learn-bit-react.ui-library-wrappers",
+        "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "mui/react-with-mui"
+        "rootDir": "mui/plugins/react-with-mui"
+    },
+    "mui/theme/theme-provider": {
+        "scope": "learn-bit-react.ui-library-wrappers",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "mui/theme/theme-provider"
     },
     "$schema-version": "14.9.0"
 }

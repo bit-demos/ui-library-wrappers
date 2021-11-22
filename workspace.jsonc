@@ -39,11 +39,11 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@emotion/react": "11.6.0",
-        "@emotion/styled": "11.6.0",
         "@testing-library/react": "12.1.2"
       },
       "peerDependencies": {
+        "@emotion/react": "11.6.0",
+        "@emotion/styled": "11.6.0",
         "@mui/material": "5.1.1",
         "react": "17.0.2",
         "react-dom": "17.0.2"
@@ -68,11 +68,14 @@
     /**
      * "*" is a special rule which applied on all components in the workspace.
      **/
-    "*": {
-      /**
-       * uncomment to apply the chosen environment on all components.
-       **/
-      // "teambit.react/react": { }
+    "{mui/**}, !{mui/theme/**}": {
+      "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui": {}
+    },
+    "{mui/theme/**}": {
+      "teambit.react/react": {}
+    },
+    "{**/plugins/**}": {
+      "teambit.harmony/aspect": {}
     }
   }
 }
