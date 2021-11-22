@@ -4,11 +4,6 @@ import { EnvsAspect, EnvsMain } from '@teambit/envs';
 import { ReactWithMuiAspect } from './react-with-mui.aspect';
 // import { previewConfigTransformer, devServerConfigTransformer } from './webpack/webpack-transformers';
 
-/**
- * Uncomment to include config files for overrides of Typescript or Webpack
- */
-// const tsconfig = require('./typescript/tsconfig');
-
 export class ReactWithMuiMain {
   static slots = [];
 
@@ -19,17 +14,46 @@ export class ReactWithMuiMain {
   static async provider([react, envs]: [ReactMain, EnvsMain]) {
     const templatesReactEnv = envs.compose(react.reactEnv, [
       /**
-       * Uncomment to override the config files for TypeScript, Webpack or Jest
-       * Your config gets merged with the defaults
+       * override dependencies here
        */
-
-      // react.overrideTsConfig(tsconfig),
-      // react.useWebpack({
-      //   previewConfig: [previewConfigTransformer],
-      //   devServerConfig: [devServerConfigTransformer],
-      // }),
-      // react.overrideJestConfig(require.resolve('./jest/jest.config')),
-
+      react.overrideDependencies({
+        dependencies: {
+          '@mui/material': '-',
+          react: '-',
+          'react-dom': '-',
+          '@testing-library/react': '-',
+          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-'
+        },
+        devDependencies: {
+          '@mui/material': '-',
+          react: '-',
+          'react-dom': '-',
+          '@testing-library/react': '-',
+          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-'
+        },
+        peerDependencies: {
+          '@mui/material': {
+            version: "5.1.1",
+            resolveFromEnv: true,
+          },
+          '@testing-library/react': {
+            version: '^5.0.6',
+            resolveFromEnv: true,
+          },
+          react: {
+            version: '^17.0.2',
+            resolveFromEnv: true,
+          },
+          'react-dom': {
+            version: '^17.0.2',
+            resolveFromEnv: true,
+          },
+          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': {
+            version: 'latest',
+            resolveFromEnv: true,
+          }
+        },
+      }),
       /**
        * override the ESLint default config here then check your files for lint errors
        * @example
@@ -58,17 +82,6 @@ export class ReactWithMuiMain {
             return config;
           }
         ]
-      }),
-
-      /**
-       * override dependencies here
-       * @example
-       * Uncomment types to include version 17.0.3 of the types package
-       */
-      react.overrideDependencies({
-        devDependencies: {
-          // '@types/react': '17.0.3'
-        }
       })
     ]);
     envs.registerEnv(templatesReactEnv);
