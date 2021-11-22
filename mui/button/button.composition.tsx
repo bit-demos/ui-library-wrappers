@@ -1,7 +1,5 @@
 import React from 'react';
-import { StyledEngineProvider } from '@mui/material/styles';
 import { Button } from './button';
-import './button.composition.css';
 
 export const MuiButtonVariants = () => {
   const variants = [
