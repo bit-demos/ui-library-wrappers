@@ -25,4 +25,4 @@ Things to note:
   },
 ```
 
-Note also that in order to ensure that compositions render correctly in all environments, you need the dependency override settings as configured in the `react-with-mui` environment, also in this Scope. We recommend simply using this env, and if required to fork and extend it yourselves where needed (e.g. if you need to override webpack or typescript configs).
+Note also that in order to ensure that compositions render correctly in all environments, you need the dependency override settings as configured in the `react-with-mui` environment (see the `.main.runtime.ts` file), also in this Scope. We recommend simply using this env for your MUI override components, and if required to fork and extend it yourselves where needed (e.g. if you need to override webpack or typescript configs).
