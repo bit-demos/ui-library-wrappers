@@ -7,7 +7,7 @@ export function Select({ children, onChange, ...rest }: SelectProps) {
 
   function handleOnChange(e: any, child: ReactNode){
     onChange(e, child);
-    alert('That\'s a great choice!');
+    alert(`${(e.target.value)}\'s a great choice!`);
   }
 
   return (

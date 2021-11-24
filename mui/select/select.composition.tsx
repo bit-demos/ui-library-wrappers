@@ -4,10 +4,10 @@ import { Select } from './select';
 
 export const BasicSelect = () => {
 
-  const [age, setAge] = useState(null);
+  const [age, setAge] = useState('');
 
   function handleChange(e: SelectChangeEvent){
-    setAge(e.target.value);
+    setAge(e.target.value as string);
   }
 
   return (
