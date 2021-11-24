@@ -7,6 +7,7 @@ export const MuiButtonVariants = () => {
   , 'outlined'
   , 'text'
   ] as const;
+
   return (
   <div className="vertical">
     {variants.map(v => {
@@ -29,6 +30,7 @@ export const MuiButtonColors = () => {
   , 'info'
   , 'warning'
 ] as const;
+
   return (
   <>
     {colors.map(c => <Button color={c}>MUI Button {c}</Button>)}
@@ -42,6 +44,7 @@ export const MuiButtonSizes = () => {
     , 'medium'
     , 'large'
   ] as const;
+  
   return (
   <div className="vertical">
     {sizes.map(s => {

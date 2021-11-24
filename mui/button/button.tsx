@@ -1,10 +1,17 @@
 import React from 'react';
 import {Button as MuiButton, ButtonProps as MuiButtonProps} from "@mui/material";
 
-export type ButtonProps = MuiButtonProps;
+export type ButtonProps = { message?: string } & MuiButtonProps;
 
-export function Button({ children, className, ...rest }: ButtonProps) {
+const defaultMessage = 'This is a customised MUI button!';
+
+export function Button({ message = defaultMessage, children, className, ...rest }: ButtonProps) {
+
+function handleClick(){
+  alert(message)
+}
+
   return (
-    <MuiButton classes={className} {...rest}>{children}</MuiButton>
+    <MuiButton classes={className} onClick={handleClick} {...rest}>{children}</MuiButton>
   );
 }
