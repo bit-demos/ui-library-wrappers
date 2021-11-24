@@ -10,9 +10,9 @@ export const MuiButtonVariants = () => {
 
   return (
   <div className="vertical">
-    {variants.map(v => {
+    {variants.map((v, index) => {
       return <>
-        <Button variant={v}>MUI Button {v} variant</Button>
+        <Button key={index} variant={v}>MUI Button {v} variant</Button>
         <br /><br />
       </>
     })}
@@ -33,7 +33,7 @@ export const MuiButtonColors = () => {
 
   return (
   <>
-    {colors.map(c => <Button color={c}>MUI Button {c}</Button>)}
+    {colors.map((c, index) => <Button key={index} color={c}>MUI Button {c}</Button>)}
   </>
   )
 };
@@ -44,12 +44,12 @@ export const MuiButtonSizes = () => {
     , 'medium'
     , 'large'
   ] as const;
-  
+
   return (
   <div className="vertical">
-    {sizes.map(s => {
+    {sizes.map((s, index) => {
       return <>
-        <Button variant="outlined" size={s}>{s} MUI Button</Button>
+        <Button key={index} variant="outlined" size={s}>{s} MUI Button</Button>
         <br /><br />
       </>
     })}

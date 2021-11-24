@@ -12,7 +12,7 @@ export const BasicSelect = () => {
 
   return (
     <FormControl sx={{ m: 1, minWidth: 80 }}>
-      <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+      <InputLabel id="demo-simple-select-label">Age</InputLabel>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
