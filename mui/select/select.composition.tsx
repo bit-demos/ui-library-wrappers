@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { MenuItem, SelectChangeEvent ,FormControl, InputLabel } from '@mui/material';
+import {
+  MenuItem, SelectChangeEvent, FormControl, InputLabel,
+} from '@mui/material';
 import { Select } from './select';
 
 export const BasicSelect = () => {
-
   const [age, setAge] = useState('');
 
-  function handleChange(e: SelectChangeEvent){
+  function handleChange(e: SelectChangeEvent) {
     setAge(e.target.value as string);
   }
 
@@ -25,5 +26,5 @@ export const BasicSelect = () => {
         <MenuItem value={30}>Thirty</MenuItem>
       </Select>
     </FormControl>
-  )
+  );
 };

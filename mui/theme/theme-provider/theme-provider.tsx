@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material';
 
 export type ThemeProviderProps = {
   /**
