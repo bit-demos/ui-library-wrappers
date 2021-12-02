@@ -11,9 +11,9 @@ export class ReactWithMuiPreviewMain {
 
   static async provider([react]: [ReactPreview]) {
     const reactWithMuiPreviewMain = new ReactWithMuiPreviewMain();
-    
+
     react.registerProvider([
-      ThemeProvider
+      ThemeProvider,
     ]);
 
     return reactWithMuiPreviewMain;

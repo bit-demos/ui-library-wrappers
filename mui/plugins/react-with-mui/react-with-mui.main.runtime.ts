@@ -22,18 +22,18 @@ export class ReactWithMuiMain {
           react: '-',
           'react-dom': '-',
           '@testing-library/react': '-',
-          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-'
+          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
         },
         devDependencies: {
           '@mui/material': '-',
           react: '-',
           'react-dom': '-',
           '@testing-library/react': '-',
-          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-'
+          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
         },
         peerDependencies: {
           '@mui/material': {
-            version: "5.1.1",
+            version: '5.2.1',
             resolveFromEnv: true,
           },
           '@testing-library/react': {
@@ -51,7 +51,7 @@ export class ReactWithMuiMain {
           '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': {
             version: 'latest',
             resolveFromEnv: true,
-          }
+          },
         },
       }),
       /**
@@ -65,8 +65,8 @@ export class ReactWithMuiMain {
           (config) => {
             config.setRule('no-console', ['error']);
             return config;
-          }
-        ]
+          },
+        ],
       }),
 
       /**
@@ -80,9 +80,9 @@ export class ReactWithMuiMain {
           (config) => {
             config.setKey('tabWidth', 2);
             return config;
-          }
-        ]
-      })
+          },
+        ],
+      }),
     ]);
     envs.registerEnv(templatesReactEnv);
     return new ReactWithMuiMain();
