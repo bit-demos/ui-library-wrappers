@@ -39,17 +39,12 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@testing-library/react": "12.1.2"
       },
       "peerDependencies": {
         "@emotion/react": "11.6.0",
         "@emotion/styled": "11.6.0",
-        "@mui/material": "5.1.1",
-        "@mui/icons-material": "5.1.1",
-        "@mui/utils": "5.1.1",
-        "@mui/private-theming": "5.1.1",
-        "@mui/styled-engine": "5.1.1",
-        "@mui/system": "5.1.1",
+        "@mui/material": "5.2.1",
+        "@testing-library/react": "12.1.2",
         "react": "17.0.2",
         "react-dom": "17.0.2"
       }
