@@ -1,0 +1,45 @@
+---
+description: 'A ThemeProvider component for MUI custom themes'
+labels: ['theme', 'MUI', 'custom']
+---
+import { createTheme } from "@mui/material";
+import Button from '@mui/material/Button';
+import { ThemeProvider } from './theme-provider';
+
+## MUI theme provider
+
+This theme provider wraps MUI's `themeProvider` component, applying a default organisation theme override, with the option of overriding again for different branding across your organisation.
+
+For details of how to override a MUI theme please see the [MUI theme configuration Docs](https://mui.com/customization/theming/).
+
+### Component usage
+```js
+<ThemeProvider theme={theme} />
+```
+
+### Default theme
+```js live
+    <ThemeProvider >
+        <Button variant="contained">This is the default override primary color</Button>
+    </ThemeProvider>
+```
+
+### Using props to customize the theme
+```js live
+
+() => {
+const theme = createTheme({
+  typography: {
+    button: {
+      fontSize: '2rem',
+    },
+  },
+});
+
+return (
+    <ThemeProvider theme={theme}>
+        <Button variant="contained">Set the font size via the theme</Button>
+    </ThemeProvider>
+    )
+}
+```

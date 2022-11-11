@@ -1,0 +1,67 @@
+---
+description: 'Customised MUI Select '
+labels: ['Custom', 'MUI', 'React', 'Select']
+---
+
+import { useState } from 'react';
+import { MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Select } from './select';
+
+## Customised MUI Select
+
+This component customised the core MUI Select via a special added select feature, which... erm creates an encouraging alert on the page when an item has been selected.
+
+There are of course far more useful real-world customisations that can be made to a select component, but this gives you the general idea of how to produce a custom version
+of your favourite MUI components with Bit. 
+
+And as you can see, the amount of code this takes is minimal, while all the tooling and dependency settings are carried out via a central custom Bit env
+
+What this component does do, beyond demonstrate a simple customisation of MUI's Select component, is illustrate the application of app-level theming on component compositions via the component's Env. Here, the compositions of this 
+component do not include any ThemeProvider, yet the primary colour, which should be blue, has been changed to purple (primary) in this component's compositions.
+
+This is done by applying a theme component as a wrapper to all compositions in the component's Env, in this case the `react-with-mui` environment.
+
+### Component API
+
+Base API - See the MUI Select API [here](https://mui.com/api/select/#props).
+
+### Component usage
+```js
+<Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Age"
+    onChange={handleChange}
+    >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+</Select>
+```
+
+### Using props to customize the text
+
+Modify the text to see it change live:
+```js live
+() => {
+    const [age, setAge] = useState('');
+
+  return  (
+    <FormControl sx={{ m: 1, minWidth: 80 }}>
+      <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+      <Select
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={age}
+        label="Age"
+        onChange={(e) => {setAge(e.target.value)}}
+      >
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </Select>
+    </FormControl>
+  )
+}
+```

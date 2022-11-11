@@ -1,0 +1,83 @@
+---
+description: 'Customised React environment, for overriding MUI components'
+labels: ['react', 'typescript', 'env', 'extension', 'MUI', 'customisation']
+---
+
+## Overview
+
+This customised react Env enables development of MUI override components. 
+
+### Customisations
+
+1. Theme added as a compositions context provider. In the `.preview.runtime.ts` file, in the Providers array we have set the ThemeProvider component, which wraps all compositions
+of components using the Env with that theme. This is behaviour that mimics a consuming app applying a theme to the component.
+1. Dependency overrides (details below). These are in order to ensure the above context is a singleton in component compositions so that provider and consumer side connect up as required.
+Without these overrides, there are scenarios in which the provided theme will not show up in compositions on the remote scope, which will affect demonstrations of how the component
+is expected to look and behave in a consuming up.
+
+### Usage instructions
+
+Under the **variants** section of your `workspace.json` file choose which components you want to have the custom environment set. You can find the id of the extension in the `react-with-mui.aspect.ts` file.
+
+```json
+{
+  "teambit.workspace/variants": {
+    "{ui/**}, {pages/**}": { // to select all components in the ui and pages namespaces
+      "learn-bit-react.ui-library-wrappers/mui.plugins.react-with-mui": {}
+    }
+  }
+}
+```
+
+### Dependencies
+
+When applying context components as Providers to compositions, it is important to ensure that these contexts are singletons, especially when connecting up disparate components in composition examples.
+
+Without the following settings, the composition themes as set in the preview.runtime file would not show up on the remote scope (e.g. bit.cloud) as the context provider and consumer would not
+connect up as required.
+
+::Note this would have no effect on consuming components in your application and applying the ThemeProvider component there. 
+
+Override the default dependencies in the `react-with-mui.main.runtime` file to ensure that all components are using the same single instance of the context components and peerDependencies such as `react`.
+
+```ts
+react.overrideDependencies({
+        dependencies: {
+          '@mui/material': '-',
+          react: '-',
+          'react-dom': '-',
+          '@testing-library/react': '-'
+        },
+        devDependencies: {
+          '@mui/material': '-',
+          react: '-',
+          'react-dom': '-',
+          '@testing-library/react': '-'
+        },
+        peerDependencies: {
+          '@mui/material': {
+            version: "5.2.1",
+            resolveFromEnv: true,
+          },
+          '@testing-library/react': {
+            version: '^5.0.6',
+            resolveFromEnv: true,
+          },
+          react: {
+            version: '^17.0.2',
+            resolveFromEnv: true,
+          },
+          'react-dom': {
+            version: '^17.0.2',
+            resolveFromEnv: true,
+          }
+        },
+      }),
+```
+
+## Preview Configurations
+
+Extend the `react-with-mui.preview.runtime` file when you want to add your own customizations only for previewing in the Bit UI.
+
+We have already added the `theme-provider` component.
+
