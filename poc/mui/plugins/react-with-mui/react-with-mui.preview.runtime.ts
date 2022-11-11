@@ -1,6 +1,6 @@
 import { PreviewRuntime } from '@teambit/preview';
 import { ReactAspect, ReactPreview } from '@teambit/react';
-import { ThemeProvider } from '@my-org/my-scope.mui.theme.theme-provider';
+import { ThemeProvider } from '@mount-sinai/poc.mui.theme.theme-provider';
 
 import { ReactWithMuiAspect } from './react-with-mui.aspect';
 

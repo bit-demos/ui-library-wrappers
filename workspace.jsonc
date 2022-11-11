@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-org.my-scope"
+    "defaultScope": "mount-sinai.poc"
   },
   /**
    * main configuration for component dependency resolution.

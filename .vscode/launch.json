@@ -9,12 +9,14 @@
       "request": "launch",
       "name": "test",
       "program": "${workspaceFolder}/node_modules/@teambit/bit/dist/app.js",
-      "args": ["test"],
+      "args": [
+        "test"
+      ],
       "resolveSourceMapLocations": [
-        "${workspaceFolder}/node_modules/@my-org/**/*.js"
+        "${workspaceFolder}/node_modules/@mount-sinai/**/*.js"
       ],
       "outFiles": [
-        "${workspaceFolder}/node_modules/@my-org/**/*.js"
+        "${workspaceFolder}/node_modules/@mount-sinai/**/*.js"
       ],
       "console": "integratedTerminal",
       "sourceMaps": true,

@@ -9,30 +9,18 @@
  */
 
 {
-    "mount-sinai-generator": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "my-scope/mount-sinai-generator",
-        "config": {
-            "teambit.harmony/aspect": {},
-            "teambit.envs/envs": {
-                "env": "teambit.harmony/aspect"
-            }
-        }
-    },
     "mui/button": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/mui/button",
+        "rootDir": "poc/mui/button",
         "config": {
             "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": {},
             "teambit.component/dev-files": {},
             "teambit.compositions/compositions": {},
             "teambit.docs/docs": {},
             "teambit.envs/envs": {
-                "env": "my-org.my-scope/mui/plugins/react-with-mui"
+                "env": "mount-sinai.poc/mui/plugins/react-with-mui"
             },
             "teambit.dependencies/dependency-resolver": {},
             "teambit.pipelines/builder": {},
@@ -43,14 +31,14 @@
                     "version": "0.0.9"
                 }
             },
-            "my-org.my-scope/mui/plugins/react-with-mui": {}
+            "mount-sinai.poc/mui/plugins/react-with-mui": {}
         }
     },
     "mui/plugins/react-with-mui": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/mui/plugins/react-with-mui",
+        "rootDir": "poc/mui/plugins/react-with-mui",
         "config": {
             "teambit.harmony/aspect": {},
             "teambit.dependencies/dependency-resolver": {},
@@ -75,14 +63,14 @@
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/mui/select",
+        "rootDir": "poc/mui/select",
         "config": {
             "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": {},
             "teambit.component/dev-files": {},
             "teambit.compositions/compositions": {},
             "teambit.docs/docs": {},
             "teambit.envs/envs": {
-                "env": "my-org.my-scope/mui/plugins/react-with-mui"
+                "env": "mount-sinai.poc/mui/plugins/react-with-mui"
             },
             "teambit.dependencies/dependency-resolver": {},
             "teambit.pipelines/builder": {},
@@ -93,14 +81,14 @@
                     "version": "0.0.3"
                 }
             },
-            "my-org.my-scope/mui/plugins/react-with-mui": {}
+            "mount-sinai.poc/mui/plugins/react-with-mui": {}
         }
     },
     "mui/theme/theme-provider": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/mui/theme/theme-provider",
+        "rootDir": "poc/mui/theme/theme-provider",
         "config": {
             "teambit.react/react": {},
             "teambit.component/dev-files": {},
