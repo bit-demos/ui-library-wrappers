@@ -60,28 +60,6 @@ export class ReactWithMuiMain {
             supportedRange: '*',
           },
         ],
-        // peerDependencies: {
-        //   '@mui/material': {
-        //     version: '5.2.1',
-        //     resolveFromEnv: true,
-        //   },
-        //   '@testing-library/react': {
-        //     version: '^5.0.6',
-        //     resolveFromEnv: true,
-        //   },
-        //   react: {
-        //     version: '^17.0.2',
-        //     resolveFromEnv: true,
-        //   },
-        //   'react-dom': {
-        //     version: '^17.0.2',
-        //     resolveFromEnv: true,
-        //   },
-        //   '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': {
-        //     version: 'latest',
-        //     resolveFromEnv: true,
-        //   },
-        // },
       }),
       /**
        * override the ESLint default config here then check your files for lint errors
