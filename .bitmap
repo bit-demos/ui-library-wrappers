@@ -11,103 +11,33 @@
 {
     "mui/button": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "poc/mui/button",
         "config": {
-            "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": {},
-            "teambit.component/dev-files": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.envs/envs": {
-                "env": "mount-sinai.poc/mui/plugins/react-with-mui"
-            },
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "learn-bit-react.ui-library-wrappers",
-                    "name": "mui/button",
-                    "version": "0.0.9"
-                }
-            },
-            "mount-sinai.poc/mui/plugins/react-with-mui": {}
+            "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": "-"
         }
     },
     "mui/plugins/react-with-mui": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "poc/mui/plugins/react-with-mui",
-        "config": {
-            "teambit.harmony/aspect": {},
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.component/dev-files": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            },
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "learn-bit-react.ui-library-wrappers",
-                    "name": "mui/plugins/react-with-mui",
-                    "version": "0.0.8"
-                }
-            },
-            "teambit.envs/env": {}
-        }
+        "rootDir": "poc/mui/plugins/react-with-mui"
     },
     "mui/select": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "poc/mui/select",
         "config": {
-            "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": {},
-            "teambit.component/dev-files": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.envs/envs": {
-                "env": "mount-sinai.poc/mui/plugins/react-with-mui"
-            },
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "learn-bit-react.ui-library-wrappers",
-                    "name": "mui/select",
-                    "version": "0.0.3"
-                }
-            },
-            "mount-sinai.poc/mui/plugins/react-with-mui": {}
+            "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui@0.0.7": "-"
         }
     },
     "mui/theme/theme-provider": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "poc/mui/theme/theme-provider",
-        "config": {
-            "teambit.react/react": {},
-            "teambit.component/dev-files": {},
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.envs/envs": {
-                "env": "bit-foundations.react/react-version-envs/react-18-env"
-            },
-            "teambit.dependencies/dependency-resolver": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "learn-bit-react.ui-library-wrappers",
-                    "name": "mui/theme/theme-provider",
-                    "version": "0.0.4"
-                }
-            },
-            "bit-foundations.react/react-version-envs/react-18-env@1.0.0": {}
-        }
+        "rootDir": "poc/mui/theme/theme-provider"
     },
     "$schema-version": "15.0.0"
 }
