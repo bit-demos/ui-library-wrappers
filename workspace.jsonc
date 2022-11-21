@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "mount-sinai",
+    "name": "my-workspace-name",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "mount-sinai.poc"
+    "defaultScope": "learn-bit-react.ui-library-wrappers"
   },
   /**
    * main configuration for component dependency resolution.
@@ -74,10 +74,18 @@
    * wrap the rule with curly brackets (e.g. `"{ui/*}": {}`)
    * see https://bit.dev/docs/workspace/variants for more info.
    **/
-  "mount-sinai.poc/mui/plugins/react-with-mui": {},
   "teambit.workspace/variants": {
-    "/poc/mui/": {
-      "mount-sinai.poc/mui/plugins/react-with-mui": {}
+    /**
+     * "*" is a special rule which applied on all components in the workspace.
+     **/
+    "{mui/**}, !{mui/theme/**}": {
+      "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui": {}
+    },
+    "{mui/theme/**}": {
+      "teambit.react/react": {}
+    },
+    "{**/plugins/**}": {
+      "teambit.harmony/aspect": {}
     }
-  },
+  }
 }
