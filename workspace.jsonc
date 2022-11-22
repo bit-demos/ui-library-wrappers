@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "learn-bit-react.ui-library-wrappers"
+    "defaultScope": "learnbit-react.ui-library-wrappers"
   },
   /**
    * main configuration for component dependency resolution.
@@ -79,7 +79,7 @@
      * "*" is a special rule which applied on all components in the workspace.
      **/
     "{mui/**}, !{mui/theme/**}": {
-      "learn-bit-react.ui-library-wrappers/mui/plugins/react-with-mui": {}
+      "learnbit-react.ui-library-wrappers/mui/plugins/react-with-mui": {}
     },
     "{mui/theme/**}": {
       "teambit.react/react": {}

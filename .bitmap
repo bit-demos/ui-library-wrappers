@@ -10,26 +10,26 @@
 
 {
     "mui/button": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.9",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/button"
     },
     "mui/plugins/react-with-mui": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.8",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/plugins/react-with-mui"
     },
     "mui/select": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.3",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/select"
     },
     "mui/theme/theme-provider": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.4",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/theme/theme-provider"
     },

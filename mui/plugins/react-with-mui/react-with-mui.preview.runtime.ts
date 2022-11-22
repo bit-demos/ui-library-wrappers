@@ -1,6 +1,6 @@
 import { PreviewRuntime } from '@teambit/preview';
 import { ReactAspect, ReactPreview } from '@teambit/react';
-import { ThemeProvider } from '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider';
+import { ThemeProvider } from '@learnbit-react/ui-library-wrappers.mui.theme.theme-provider';
 
 import { ReactWithMuiAspect } from './react-with-mui.aspect';
 
