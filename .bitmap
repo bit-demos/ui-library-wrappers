@@ -3,35 +3,35 @@
 /**
  * The Bitmap file is an auto generated file used by Bit to track all your Bit components. It maps the component to a folder in your file system.
  * This file should be committed to VCS(version control).
- * Components are listed using their component ID (https://harmony-docs.bit.dev/aspects/component/#component-id).
+ * Components are listed using their component ID (https://bit.dev/docs/components/component-id).
  * If you want to delete components you can use the "bit remove <component-id>" command.
- * See the docs (https://harmony-docs.bit.dev/building-with-bit/removing-components) for more information, or use "bit remove --help".
+ * See the docs (https://bit.dev/docs/components/removing-components) for more information, or use "bit remove --help".
  */
 
 {
     "mui/button": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.9",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/button"
     },
     "mui/plugins/react-with-mui": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.8",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/plugins/react-with-mui"
     },
     "mui/select": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.3",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/select"
     },
     "mui/theme/theme-provider": {
-        "scope": "learn-bit-react.ui-library-wrappers",
-        "version": "0.0.4",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mui/theme/theme-provider"
     },
-    "$schema-version": "14.9.0"
+    "$schema-version": "15.0.0"
 }

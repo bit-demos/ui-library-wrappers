@@ -22,37 +22,44 @@ export class ReactWithMuiMain {
           react: '-',
           'react-dom': '-',
           '@testing-library/react': '-',
-          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
+          '@learnbit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
         },
         devDependencies: {
           '@mui/material': '-',
           react: '-',
           'react-dom': '-',
           '@testing-library/react': '-',
-          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
+          '@learnbit-react/ui-library-wrappers.mui.theme.theme-provider': '-',
+          '@types/react': '^18.0.17',
+          '@types/react-dom': '^18.0.6',
         },
-        peerDependencies: {
-          '@mui/material': {
+        peers: [
+          {
+            name: 'react',
+            version: '18.2.0',
+            supportedRange: '^18.2.0',
+          },
+          {
+            name: 'react-dom',
+            version: '18.2.0',
+            supportedRange: '^18.2.0',
+          },
+          {
+            name: '@mui/material',
             version: '5.2.1',
-            resolveFromEnv: true,
+            supportedRange: '^5.2.1',
           },
-          '@testing-library/react': {
-            version: '^5.0.6',
-            resolveFromEnv: true,
+          {
+            name: '@testing-library/react',
+            version: '13.4.0',
+            supportedRange: '^13.4.0',
           },
-          react: {
-            version: '^17.0.2',
-            resolveFromEnv: true,
-          },
-          'react-dom': {
-            version: '^17.0.2',
-            resolveFromEnv: true,
-          },
-          '@learn-bit-react/ui-library-wrappers.mui.theme.theme-provider': {
+          {
+            name: '@learnbit-react/ui-library-wrappers.mui.theme.theme-provider',
             version: 'latest',
-            resolveFromEnv: true,
+            supportedRange: '*',
           },
-        },
+        ],
       }),
       /**
        * override the ESLint default config here then check your files for lint errors
